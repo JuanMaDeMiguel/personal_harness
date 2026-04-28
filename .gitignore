@@ -41,6 +41,7 @@ Thumbs.db
 
 # ── Claude Code internal ────────────────────────────────────────
 .claude/
+CLAUDE.md
 
 # ── Legacy planning file ────────────────────────────────────────
 GEMINI.md
