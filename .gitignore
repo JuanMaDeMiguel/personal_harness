@@ -1,0 +1,46 @@
+# ── Sensitive ──────────────────────────────────────────────────
+.env
+*.env
+.env.*
+secrets.*
+
+# ── Session data (may contain private conversation history) ────
+.harness_sessions.json
+.harness_sessions.tmp
+# legacy single-session file
+.harness_session.json
+
+# ── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environment ─────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Distribution / packaging ────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── IDE ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── OS ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Claude Code internal ────────────────────────────────────────
+.claude/
+
+# ── Legacy planning file ────────────────────────────────────────
+GEMINI.md
