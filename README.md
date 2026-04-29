@@ -47,13 +47,13 @@ User input
 │  │ Planner  │ ──────────────▶  │  Tool Executor       │ │
 │  │  (api.py)│ ◀─────────────── │  (tools.py)          │ │
 │  └──────────┘   observation    └──────────────────────┘ │
-│       │                                                  │
+│       │                                                 │
 │       │ answer_directly / max iterations                │
-│       ▼                                                  │
-│  ┌──────────┐                                            │
-│  │  Answer  │                                            │
-│  │  (api.py)│                                            │
-│  └──────────┘                                            │
+│       ▼                                                 │
+│  ┌──────────┐                                           │
+│  │  Answer  │                                           │
+│  │  (api.py)│                                           │
+│  └──────────┘                                           │
 └─────────────────────────────────────────────────────────┘
     │
     ▼
@@ -70,6 +70,7 @@ The proxy API has pre-configured agent behavior and strips system prompts. Harne
 ### Planner guardrails
 
 The planner prompt is written so the model:
+
 - Uses tools when it needs information it doesn't already have
 - Chooses `answer_directly` only when the answer is already present in the context
 - Respects session context from previous turns (tool results are serialised as `[tool(args)] -> result`)
@@ -101,7 +102,7 @@ harness/
 ## Installation
 
 ```bash
-git clone https://github.com/<you>/harness.git
+git clone https://github.com/JuanMaDeMiguel/personal_harness.git
 cd harness
 python -m venv venv
 source venv/bin/activate
@@ -191,7 +192,7 @@ The input widget is a hand-rolled `prompt_toolkit.Application` rather than the b
 
 ```
 [input — grows/shrinks as text wraps]
-[─── rule ───────────────────────────]
+[─── rule ──────────────────────────]
 [completions — 0 rows when empty    ]
 [model · effort ─ right-aligned ─── ]
 ```
